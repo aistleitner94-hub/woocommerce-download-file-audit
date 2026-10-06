@@ -1,0 +1,87 @@
+name: Pilot interest / offer feedback
+description: Non-binding feedback on the proposed EUR 29 agency pilot. No orders or payments.
+title: "[Offer feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Public form.** Do not include shop/client names, URLs, exports, attachments, credentials or personal contact details. Your GitHub username and answers will be public. Monitoring is not operational; this is not a purchase or reservation.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      options:
+        - Agency or freelance technical maintainer
+        - In-house technical store operator
+        - Other / prefer not to say
+    validations:
+      required: true
+  - type: dropdown
+    id: stores
+    attributes:
+      label: Stores you maintain selling locally hosted downloadable files
+      options:
+        - "0"
+        - "1"
+        - "2–5"
+        - "6+"
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: storage
+    attributes:
+      label: Download storage
+      options:
+        - Local WordPress uploads
+        - External / CDN / S3 / signed URLs
+        - Mixed
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: existing
+    attributes:
+      label: Does your current method already detect missing local download files sufficiently?
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: intent
+    attributes:
+      label: Having read the proposed scope, which best describes your interest?
+      options:
+        - Would consider paying EUR 29 for the first month, subject to readiness and terms
+        - Free diagnostic only
+        - Would not use either
+        - Cannot judge yet
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where did you find this offer?
+      options:
+        - WooCommerce Community Slack
+        - GitHub search
+        - Web search
+        - Agency / partner referral
+        - Direct personal contact
+        - Other / unknown
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Optional non-sensitive reason or blocker
+      description: Please use generic examples only. No identifying shop information.
+  - type: checkboxes
+    id: understanding
+    attributes:
+      label: Status understood
+      options:
+        - label: I read the proposed EUR 29 offer and understand that monitoring is not operational, this reply is public, and no purchase or subscription is created.
+          required: true

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 100,
+    "downloadable": true,
+    "downloads": [
+      {
+        "id": "file-a",
+        "file": "https://demo.example/wp-content/uploads/present.txt"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "downloadable": true,
+    "downloads": [
+      {
+        "id": "file-b",
+        "file": "https://demo.example/wp-content/uploads/missing.txt"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "downloadable": true,
+    "downloads": [
+      {
+        "id": "file-c",
+        "file": "https://demo.example/wp-content/uploads/empty.txt"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "downloadable": true,
+    "downloads": [
+      {
+        "id": "file-d",
+        "file": "https://cdn.example/offloaded.pdf"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "downloadable": true,
+    "downloads": []
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0-diagnostic",
+  "generated_at": "2026-10-05T18:06:13.141475+00:00",
+  "scope": "Only supplied downloadable records and plain URLs under the configured local uploads directory. No order, permission, checkout, email or customer download test.",
+  "records_supplied": 5,
+  "findings": [
+    {
+      "key": "100:file-a",
+      "product_id": 100,
+      "download_id": "file-a",
+      "status": "LOCAL_FILE_PRESENT",
+      "explanation": "Non-empty local file exists. Delivery and access are NOT verified."
+    },
+    {
+      "key": "101:file-b",
+      "product_id": 101,
+      "download_id": "file-b",
+      "status": "MISSING_LOCAL_FILE",
+      "explanation": "No file at the mapped path. Confirm export/storage mapping before remediation."
+    },
+    {
+      "key": "102:file-c",
+      "product_id": 102,
+      "download_id": "file-c",
+      "status": "EMPTY_FILE",
+      "explanation": "Mapped local file has zero bytes."
+    },
+    {
+      "key": "103:file-d",
+      "product_id": 103,
+      "download_id": "file-d",
+      "status": "UNSUPPORTED",
+      "explanation": "External/offloaded/non-uploads file: not checked; no request sent."
+    },
+    {
+      "key": "104:inventory",
+      "product_id": 104,
+      "download_id": "inventory",
+      "status": "NO_FILES_CONFIGURED",
+      "explanation": "Downloadable product has no file entries in this export."
+    }
+  ],
+  "changes": [
+    {
+      "key": "100:file-a",
+      "before": "NOT_IN_PREVIOUS_EXPORT",
+      "after": "LOCAL_FILE_PRESENT"
+    },
+    {
+      "key": "101:file-b",
+      "before": "LOCAL_FILE_PRESENT",
+      "after": "MISSING_LOCAL_FILE"
+    },
+    {
+      "key": "102:file-c",
+      "before": "NOT_IN_PREVIOUS_EXPORT",
+      "after": "EMPTY_FILE"
+    },
+    {
+      "key": "103:file-d",
+      "before": "NOT_IN_PREVIOUS_EXPORT",
+      "after": "UNSUPPORTED"
+    },
+    {
+      "key": "104:inventory",
+      "before": "NOT_IN_PREVIOUS_EXPORT",
+      "after": "NO_FILES_CONFIGURED"
+    }
+  ]
+}
